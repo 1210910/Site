@@ -7,7 +7,7 @@ import {HousingService} from "../housing.service";
 import routes from "../routes";
 
 @Component({
-    selector: 'app-building-create',
+    selector: 'app-floor-create',
     standalone: true,
     imports: [CommonModule, RouterLink],
     template: `
@@ -16,7 +16,7 @@ import routes from "../routes";
 
               <nav>
                   <ul class="menuItems">
-                      <li><a [routerLink]="['/building']">
+                      <li><a [routerLink]="['/passageway']">
                           <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
                       </a></li>
                   </ul>
@@ -34,26 +34,23 @@ import routes from "../routes";
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Code</label>
+                          <label for="">Passage Code</label>
                       </div>
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Name</label>
+                          <label for="">floor1</label>
                       </div>
                   </div>
                   <div class="form-row">
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Max length</label>
+                          <label for="">floor2</label>
                       </div>
-                      <div class="input-data">
-                          <input type="text" required>
-                          <div class="underline"></div>
-                          <label for="">Max width</label>
-                      </div>
-                  </div>
+
+                    </div>
+
                   <div class="form-row">
                       <div class="input-data textarea">
                           <textarea rows="8" cols="80" required></textarea>
@@ -64,7 +61,7 @@ import routes from "../routes";
                           <div class="form-row submit-btn">
                               <div class="input-data">
                                   <div class="inner"></div>
-                                  <a [routerLink]="['/building']"><input type="submit" value="submit" (click)="createBuilding()" > </a>
+                                  <a [routerLink]="['/passageway']"><input type="submit" value="submit" (click)="createBuilding()" > </a>
                               </div>
                           </div>
                         </div>
@@ -73,11 +70,11 @@ import routes from "../routes";
           </div>
           </section>
   `,
-    styleUrls: ["./buildingCreate.component.css"]
+    styleUrls: ["./passagewayCreate.component.css"]
 
 })
 
-export class BuildingCreateComponent{
+export class PassagewayCreateComponent {
     housingLocationList: HousingLocation[] = [];
     housingService: HousingService = inject(HousingService);
     filteredLocationList: HousingLocation[] = [];

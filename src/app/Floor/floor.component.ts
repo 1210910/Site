@@ -18,9 +18,9 @@ import {HousingService} from "../housing.service";
                       <li><a [routerLink]="['/home']">
                           <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
                       </a></li>
-                      <li><a [routerLink]="['/buildingCreate']" data-item='Create'>Create</a></li>
-                      <li><a [routerLink]="['/buildingEdit']" data-item='Edit'>Edit</a></li>
-                      <li><a [routerLink]="['/buildingList']" data-item='List'>List</a></li>
+                      <li><a [routerLink]="['/floorCreate']" data-item='Create'>Create</a></li>
+                      <li><a [routerLink]="['/floorEdit']" data-item='Edit'>Edit</a></li>
+                      <li><a [routerLink]="['/floorList']" data-item='List'>List</a></li>
 
                   </ul>
               </nav>
@@ -29,16 +29,16 @@ import {HousingService} from "../housing.service";
       </section>
       <section class="cd-intro">
         <div class="cd-intro-content bouncy">
-          <h1>Building</h1>
-          <p>With this feature you can: Create, edit and list  building</p>
+          <h1>Floor</h1>
+          <p>With this feature you can: Create, edit and list  floors</p>
         </div>
       </section>
   `,
-  styleUrls: ["./building.component.css"]
+  styleUrls: ["./floor.component.css"]
 
 })
 
-export class BuildingComponent{
+export class FloorComponent {
     housingLocationList: HousingLocation[] = [];
     housingService: HousingService = inject(HousingService);
     filteredLocationList: HousingLocation[] = [];

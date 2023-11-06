@@ -19,10 +19,10 @@ import {RouterLink} from "@angular/router";
             </a></li>
             <li><a [routerLink]="['/']" data-item='Campus'>Campus</a></li>
             <li><a [routerLink]="['/building']" data-item='Buildings'>Buildings</a></li>
-            <li><a [routerLink]="['/']" data-item='Floors'>Floors</a></li>
-            <li><a [routerLink]="['/']" data-item='Passageway'>Passageway</a></li>
-            <li><a [routerLink]="['/']" data-item='Rooms'>Rooms</a></li>
-            <li><a [routerLink]="['/']" data-item='Lift'>Lift</a></li>
+            <li><a [routerLink]="['/floor']" data-item='Floors'>Floors</a></li>
+            <li><a [routerLink]="['/passageway']" data-item='Passageway'>Passageway</a></li>
+            <li><a [routerLink]="['/room']" data-item='Rooms'>Rooms</a></li>
+            <li><a [routerLink]="['/lift']" data-item='Lift'>Lift</a></li>
             <li >
               <div class="search-box">
                 <button class="btn-search" type="button" (click)="filterResults(filter.value)"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -71,7 +71,7 @@ export class HomeComponent {
     }
 
     this.filteredLocationList = this.housingLocationList.filter(
-      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+      housingLocation => housingLocation?.name.toLowerCase().includes(text.toLowerCase())
     );
   }
 

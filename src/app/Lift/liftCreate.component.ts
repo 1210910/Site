@@ -7,7 +7,7 @@ import {HousingService} from "../housing.service";
 import routes from "../routes";
 
 @Component({
-    selector: 'app-building-create',
+    selector: 'app-floor-create',
     standalone: true,
     imports: [CommonModule, RouterLink],
     template: `
@@ -16,7 +16,7 @@ import routes from "../routes";
 
               <nav>
                   <ul class="menuItems">
-                      <li><a [routerLink]="['/building']">
+                      <li><a [routerLink]="['/lift']">
                           <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
                       </a></li>
                   </ul>
@@ -34,24 +34,36 @@ import routes from "../routes";
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Code</label>
+                          <label for="">Lift Code</label>
                       </div>
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Name</label>
+                          <label for="">floors(seperated by commas)</label>
                       </div>
                   </div>
                   <div class="form-row">
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Max length</label>
+                          <label for="">brand</label>
                       </div>
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Max width</label>
+                          <label for="">model</label>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="input-data">
+                          <input type="text" required>
+                          <div class="underline"></div>
+                          <label for="">Building Code</label>
+                      </div>
+                      <div class="input-data">
+                          <input type="text" required>
+                          <div class="underline"></div>
+                          <label for="">Serial Number</label>
                       </div>
                   </div>
                   <div class="form-row">
@@ -64,20 +76,20 @@ import routes from "../routes";
                           <div class="form-row submit-btn">
                               <div class="input-data">
                                   <div class="inner"></div>
-                                  <a [routerLink]="['/building']"><input type="submit" value="submit" (click)="createBuilding()" > </a>
+                                  <a [routerLink]="['/lift']"><input type="submit" value="submit" (click)="createBuilding()" > </a>
                               </div>
                           </div>
-                        </div>
-                    </div>
+                      </div>
+                  </div>
               </form>
           </div>
           </section>
   `,
-    styleUrls: ["./buildingCreate.component.css"]
+    styleUrls: ["./liftCreate.component.css"]
 
 })
 
-export class BuildingCreateComponent{
+export class LiftCreateComponent {
     housingLocationList: HousingLocation[] = [];
     housingService: HousingService = inject(HousingService);
     filteredLocationList: HousingLocation[] = [];

@@ -16,7 +16,7 @@ import routes from "../routes";
 
               <nav>
                   <ul class="menuItems">
-                      <li><a [routerLink]="['/building']">
+                      <li><a [routerLink]="['/floor']">
                           <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
                       </a></li>
                   </ul>
@@ -34,26 +34,33 @@ import routes from "../routes";
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Code</label>
+                          <label for="">Floor Code</label>
                       </div>
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Building Name</label>
+                          <label for="">Floor Number</label>
                       </div>
                   </div>
                   <div class="form-row">
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Max length</label>
+                          <label for="">Length</label>
                       </div>
                       <div class="input-data">
                           <input type="text" required>
                           <div class="underline"></div>
-                          <label for="">Max width</label>
+                          <label for="">Width</label>
                       </div>
-                  </div>
+                    </div>
+                      <div class="form-row">
+                      <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label for="">Building Code</label>
+                      </div>
+                      </div>
                   <div class="form-row">
                       <div class="input-data textarea">
                           <textarea rows="8" cols="80" required></textarea>
@@ -73,11 +80,11 @@ import routes from "../routes";
           </div>
           </section>
   `,
-    styleUrls: ["./buildingCreate.component.css"]
+    styleUrls: ["./floorCreate.component.css"]
 
 })
 
-export class BuildingCreateComponent{
+export class FloorCreateComponent {
     housingLocationList: HousingLocation[] = [];
     housingService: HousingService = inject(HousingService);
     filteredLocationList: HousingLocation[] = [];
