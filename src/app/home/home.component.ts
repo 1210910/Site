@@ -17,10 +17,10 @@ import {RouterLink} from "@angular/router";
             <li><a [routerLink]="['/']">
               <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
             </a></li>
-            <li><a [routerLink]="['/']" data-item='Campus View'>Campus View</a></li>
+            <li><a [routerLink]="['/']" data-item='Campus'>Campus</a></li>
             <li><a [routerLink]="['/building']" data-item='Buildings'>Buildings</a></li>
             <li><a [routerLink]="['/']" data-item='Floors'>Floors</a></li>
-            <li><a [routerLink]="['/']" data-item='Passage Way'>Passage Way</a></li>
+            <li><a [routerLink]="['/']" data-item='Passageway'>Passageway</a></li>
             <li><a [routerLink]="['/']" data-item='Rooms'>Rooms</a></li>
             <li><a [routerLink]="['/']" data-item='Lift'>Lift</a></li>
             <li >
@@ -34,14 +34,23 @@ import {RouterLink} from "@angular/router";
       </header>
 
     </section>
-    <section>
-      <h2>Results</h2>
-        <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+    <section class="cd-intro">
+      <div class="cd-intro-content bouncy">
+        <h1>Campus Management App</h1>
+        <p>Manage your campus with ease</p>
+        <div class="action-wrapper">
+          <a href="#0" class="cd-btn main-action">About Us</a>
+          <a href="https://moodle.isep.ipp.pt/pluginfile.php/325421/mod_resource/content/1/LAPR5-regras-gerais-funcionamento.v2.pdf" target="_blank" class="cd-btn">Learn More</a>
+        </div>
+      </div>
     </section>
   `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  //<app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+
   housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
   filteredLocationList: HousingLocation[] = [];

@@ -27,9 +27,12 @@ import {HousingService} from "../housing.service";
           </header>
 
       </section>
-      <section>
-          <h2>Results</h2>
-          </section>
+      <section class="cd-intro">
+        <div class="cd-intro-content bouncy">
+          <h1>Building</h1>
+          <p>With this feature you can: Create, edit and list  building</p>
+        </div>
+      </section>
   `,
   styleUrls: ["./building.component.css"]
 

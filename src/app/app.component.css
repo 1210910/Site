@@ -11,6 +11,10 @@ header {
   margin-top: 10px;
   padding: var(--content-padding);
 }
+main{
+  background-color: #f9f9f9;
+}
+
 
 
 
