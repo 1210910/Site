@@ -15,7 +15,7 @@ import {RouterLink} from "@angular/router";
         <nav>
           <ul class="menuItems">
             <li><a [routerLink]="['/']">
-              <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+              <img class="brand-logo" src="/assets/logoCampus.svg" alt="logo" aria-hidden="true">
             </a></li>
             <li><a [routerLink]="['/']" data-item='Campus'>Campus</a></li>
             <li><a [routerLink]="['/building']" data-item='Buildings'>Buildings</a></li>

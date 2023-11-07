@@ -13,7 +13,7 @@ import {RouterLink} from "@angular/router";
       <div class="top"></div>
       <div class="bottom"></div>
       <div class="center">
-        <h2>Please Sign In</h2>
+        <img class="brand-logo" src="/assets/login.svg" alt="logo" aria-hidden="true">
         <input type="email" placeholder="username"/>
         <input type="password" placeholder="password"/>
         <button class="btn" (click)="onclick()" >Sign In</button>

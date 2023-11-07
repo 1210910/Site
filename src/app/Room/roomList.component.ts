@@ -17,7 +17,7 @@ import routes from "../routes";
               <nav>
                   <ul class="menuItems">
                       <li><a [routerLink]="['/room']">
-                          <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+                          <img class="brand-logo" src="/assets/logoRooms.svg" alt="logo" aria-hidden="true">
                       </a></li>
                   </ul>
               </nav>

@@ -16,7 +16,7 @@ import {HousingService} from "../housing.service";
               <nav>
                   <ul class="menuItems">
                       <li><a [routerLink]="['/home']">
-                          <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+                          <img class="brand-logo" src="/assets/logoBuilding(1).svg" alt="logo" aria-hidden="true">
                       </a></li>
                       <li><a [routerLink]="['/buildingCreate']" data-item='Create'>Create</a></li>
                       <li><a [routerLink]="['/buildingEdit']" data-item='Edit'>Edit</a></li>

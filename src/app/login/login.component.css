@@ -42,20 +42,20 @@ body {
 
 .top:before {
   transform: rotate(45deg);
-  background: #e46569;
+  background: #ad84ec;
 }
 .top:after {
   transform: rotate(135deg);
-  background: #ecaf81;
+  background: #9f01ea;
 }
 
 .bottom:before {
   transform: rotate(-45deg);
-  background: #60b8d4;
+  background: #6a64f1;
 }
 .bottom:after {
   transform: rotate(-135deg);
-  background: #3745b5;
+  background: #5016f4;
 }
 
 .center {
@@ -92,14 +92,14 @@ button{
   border-radius: 1px;
   border: 1px solid #ccc;
   font-family: inherit;
-  background-color: #e46569;
+  background-color: #5016f4;
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
 alert{
-  color: red;
+  color:#5016f4 ;
   font-weight: bold;
 }
 
